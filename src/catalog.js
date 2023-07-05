@@ -19,6 +19,40 @@ fetch(url)
     .catch(err => console.log(err));
 
 
+const sendBtn = document.getElementById('submit');
+const message = document.getElementById('message');
+
+sendBtn.addEventListener('click', sendMsg);
+
+function sendMsg() {
+
+    let content = message.value;
+    let author = localStorage.getItem('username');
+
+    if (localStorage.getItem('username') == null) {
+        author = 'Anon'
+    }
+
+    const baseUrl = 'http://localhost:3030/jsonstore';
+
+    fetch(`${baseUrl}/messenger`, {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({ author, content })
+    })
+        .then(response => response.json())
+        .then((msg) => {
+            chatArea.textContent += `${msg.author}: ${msg.content}\n`;
+        })
+        .catch(err => console.log(err))
+
+    message.value = '';
+}
+
+
+
 const welcomeMsg = document.getElementById('welcome');
 const authLink = document.getElementById('auth-link');
 const logOut = document.getElementById('logout-link');

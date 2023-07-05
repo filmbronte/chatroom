@@ -93,4 +93,3 @@ async function onSignup(e) {
         alert(err.message);
     }
 }
-
