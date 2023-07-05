@@ -31,6 +31,11 @@ if (localStorage.getItem('username') != null) {
 }
 
 logOut.addEventListener('click', () => {
+    const choice = confirm('Are you sure you want to log out?');
+    if (choice == false) {
+        return;
+    }
+
     localStorage.clear();
 
     logOut.style.display = 'none';
