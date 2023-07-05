@@ -32,8 +32,8 @@ button {
 div,
 h2,
 nav,
-input[type="button"],
 h4,
+input[type="button"],
 button {
   margin: auto;
   text-align: center;
