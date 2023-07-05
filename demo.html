@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom</title>
+    <link rel="stylesheet" href="/src/styles/styles.css">
+    <script src="/src/index.js" type="module"></script>
+    <style>
+        a {
+            padding: 5px;
+        }
+
+        #views {
+            display: none;
+        }
+
+        #logout-link {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 id="welcome">Welcome, anonymous!</h4>
+    <nav>
+        <a href="#" id="catalog-link">Chatroom</a>
+        <a href="#" id="auth-link">Log in / Sign Up</a>
+        <a href="#" id="logout-link">Log Out</a>
+    </nav>
+
+    <main></main>
+    <div id="views">
+        <section id="catalog">
+            <h2>Chatroom</h2>
+            <div>
+                <textarea id="chatbox" cols="80" rows="12" disabled="true"></textarea>
+                <div id="controls">
+                    <label for="content">Message: </label><input name="content" type="text" id="message">
+                    <input id="submit" type="button" value="Send">
+                    <input id="refresh" type="button" value="Refresh">
+                </div>
+            </div>
+        </section>
+
+        <form id="login">
+            <h2>Log In</h2>
+            <div>
+                <label for="email">E-mail: </label><input type="text" name="email" id="email">
+            </div>
+            <div>
+                <label for="password">Password: </label><input type="password" name="password" id="password">
+            </div>
+            <div>
+                <button>Log In</button>
+            </div>
+            <div>
+                <p>New user? <a href="#" id="signup-link">Sign up</a></p>
+            </div>
+        </form>
+        <form id="signup">
+            <h2>Sign Up</h2>
+            <div>
+                <label for="username">Username: </label><input type="text" name="username" id="new-username">
+            </div>
+            <div>
+                <label for="email">E-mail: </label><input type="text" name="email" id="new-email">
+            </div>
+            <div>
+                <label for="password">Password: </label><input type="password" name="password" id="new-password">
+            </div>
+            <div>
+                <label for="repass">Repeat password: </label><input type="password" name="repass" id="repass">
+            </div>
+            <div>
+                <button>Sign Up</button>
+            </div>
+            <div>
+                <p>Existing user? <a href="#" id="login-link">Log In</a></p>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
