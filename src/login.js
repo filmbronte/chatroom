@@ -1,5 +1,7 @@
 const loginSection = document.getElementById('login');
 const signupSection = document.getElementById('signup');
+const successMsg = document.getElementById('success');
+const successLogin = document.getElementById('success-login');
 
 export function showLogin() {
     document.querySelector('main').replaceChildren(loginSection);
@@ -85,7 +87,11 @@ async function onSignup(e) {
 
         localStorage.setItem('accessToken', data.accessToken)
 
-        location = './demo.html'
+        document.querySelector('main').replaceChildren(successMsg);
+        successLogin.addEventListener('click', () => {
+            document.querySelector('main').replaceChildren(loginSection);
+        })
+        // location = './demo.html'
 
     } catch (err) {
         alert(err.message);
