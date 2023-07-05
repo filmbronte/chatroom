@@ -29,8 +29,12 @@ function sendMsg() {
     let content = message.value;
     let author = localStorage.getItem('username');
 
+    if (content == '') {
+        return;
+    }
+
     if (localStorage.getItem('username') == null) {
-        author = 'Anon'
+        author = 'Anon';
     }
 
     const baseUrl = 'http://localhost:3030/jsonstore';

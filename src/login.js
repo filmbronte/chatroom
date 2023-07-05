@@ -87,7 +87,7 @@ async function onSignup(e) {
 
         localStorage.setItem('accessToken', data.accessToken)
 
-        location = '/demo.html';
+        location = './demo.html'
 
     } catch (err) {
         alert(err.message);
