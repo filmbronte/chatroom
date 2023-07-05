@@ -14,3 +14,4 @@ document.getElementById('auth-link').addEventListener('click', () => {
 document.getElementById('catalog-link').addEventListener('click', () => {
     showCatalog();
 })
+
