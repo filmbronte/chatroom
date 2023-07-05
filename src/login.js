@@ -91,7 +91,6 @@ async function onSignup(e) {
         successLogin.addEventListener('click', () => {
             document.querySelector('main').replaceChildren(loginSection);
         })
-        // location = './demo.html'
 
     } catch (err) {
         alert(err.message);
