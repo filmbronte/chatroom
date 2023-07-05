@@ -83,8 +83,6 @@ async function onSignup(e) {
 
         const data = await response.json();
 
-        // console.log(data.accessToken)
-
         localStorage.setItem('accessToken', data.accessToken)
 
         location = './demo.html'
