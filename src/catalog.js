@@ -55,8 +55,6 @@ function sendMsg() {
     message.value = '';
 }
 
-
-
 const welcomeMsg = document.getElementById('welcome');
 const authLink = document.getElementById('auth-link');
 const logOut = document.getElementById('logout-link');
